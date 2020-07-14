@@ -1,4 +1,5 @@
-FROM debian:stretch-slim
+ARG BASE_IMAGE=debian:stretch-slim
+FROM ${BASE_IMAGE}
 
 ARG OSSUTIL_VERSION=1.6.10
 ADD http://gosspublic.alicdn.com/ossutil/${OSSUTIL_VERSION}/ossutil64 /usr/bin/

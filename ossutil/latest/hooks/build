@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BASE_IMAGE_ARG=${BASE_IMAGE_LATEST:-${BASE_IMAGE_DEFAULT}}
+OSSUTIL_VERSION_ARG=${OSSUTIL_VERSION_LATEST:-${OSSUTIL_VERSION_DEFAULT}}
+
+# https://docs.docker.com/docker-hub/builds/#environment-variables-for-builds
+# https://docs.docker.com/docker-hub/builds/advanced/#override-build-test-or-push-commands
+cmd="docker build \
+       --build-arg BASE_IMAGE=$BASE_IMAGE_ARG \
+       --build-arg OSSUTIL_VERSION=$OSSUTIL_VERSION_ARG \
+       -f $DOCKERFILE_PATH \
+       -t $IMAGE_NAME ."
+
+echo -e "$cmd"
+exec $cmd
