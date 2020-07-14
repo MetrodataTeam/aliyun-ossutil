@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BASE_IMAGE_ARG=${BASE_IMAGE_LATEST:-${BASE_IMAGE_DEFAULT}}
-OSSUTIL_VERSION_ARG=${OSSUTIL_VERSION_LATEST:-${OSSUTIL_VERSION_DEFAULT}}
+BASE_IMAGE_ARG=${BASE_IMAGE_NODE:-${BASE_IMAGE_DEFAULT}}
+OSSUTIL_VERSION_ARG=${OSSUTIL_VERSION_NODE:-${OSSUTIL_VERSION_DEFAULT}}
 
 # https://docs.docker.com/docker-hub/builds/#environment-variables-for-builds
 # https://docs.docker.com/docker-hub/builds/advanced/#override-build-test-or-push-commands
